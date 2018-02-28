@@ -1,0 +1,2 @@
+class FrigosController < ApplicationController
+end
