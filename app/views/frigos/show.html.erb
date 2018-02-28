@@ -1,0 +1,7 @@
+<h2><%= @frigo.name %></h2>
+<ul>
+  <% @frigo.stocks.each do |stock| %>
+    <li><%= stock.quantity %> <%= stock.ingredient.name %></li>
+  <% end %>
+</ul>
+<%= link_to "Add a new item in the fridge", new_frigo_stock_path(@frigo) %>
