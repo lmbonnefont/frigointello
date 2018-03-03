@@ -1,2 +1,9 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+<% frigos = Frigo.all %>
+<ul>
+  <% frigos.each do |frigo| %>
+    <li><%= link_to frigo.name, frigo_path(frigo) %></li>
+  <% end %>
+</ul>
+<%= link_to "create a frigo", new_frigo_path %>
